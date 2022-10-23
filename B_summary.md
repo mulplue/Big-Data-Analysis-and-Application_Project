@@ -67,6 +67,21 @@ TF-IDF的==主要思想==是：如果某个单词在一篇文章中出现的频�
 
 分类任务
 
+[如何解决NLP分类任务的11个关键问题](https://zhuanlan.zhihu.com/p/183852900)
+
+- ==类别不平衡==处理（[长尾分布学习处理](https://www.zhihu.com/question/372186043/answer/1393735908)）
+  - **重采样**：对少样本的过采样，或是对多样本的欠采样，容易信息丢失，过拟合
+  - **数据合成**：
+    - 对少类样本加随机高斯噪声，做data smoothing
+    - SMOTE
+  - **重加权**：重加权不同类别的loss
+    - 按照类别数目的倒数来做加权
+    - 按照“有效”样本数加权
+    - 根据样本数优化分类间距的loss加权
+  - **阀值调整**
+  - **模型融合**
+  - **迁移学习（transfer learning）**：这类方法的基本思路是对多类样本和少类样本分别建模，将学到的多类样本的信息/表示/知识迁移给少类别使用。
+
 事故等级
 
 数据列`Accident Level`作为输出标签
@@ -111,6 +126,8 @@ lgb--------GBDT
 
 - GBDT
 
+[shap黑盒模型解释](https://zhuanlan.zhihu.com/p/106320452)
+
 
 
 #### 结论
@@ -128,3 +145,6 @@ lgb--------GBDT
 <b>Description</b> : Detailed description of how the accident happened
 
 这两个部分需要自然语言处理
+
+
+
