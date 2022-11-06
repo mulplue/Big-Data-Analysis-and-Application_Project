@@ -5,7 +5,6 @@
 ### Environment
 
 ```bash
-cd Baseline
 pip install -r requirement.txt
 ```
 
